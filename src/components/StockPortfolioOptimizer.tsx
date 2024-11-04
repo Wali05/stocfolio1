@@ -45,7 +45,7 @@ export default function StockPortfolioOptimizer() {
     const weights = stocks.map(stock => parseFloat(stock.weight))
 
     try {
-      const response = await fetch('http://localhost:5002/optimize', { // Changed port to 5002 as in your Flask code
+      const response = await fetch('https://stocfolio1-flask.onrender.com/optimize', { // Updated to Render backend URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
